@@ -35,3 +35,16 @@ done
 
 echo "Head Won" $headCount "times"
 echo "Tail Won" $tailCount "times"
+
+if [[ $headCount -gt $tailCount ]]
+then
+	num1=$((headCount-tailCount))
+	echo "Heads Won by $num1"
+
+elif [[ $tailCount -gt $headCount ]]
+then
+	num2=$((tailCount-headCount))
+	echo "Tail Won by $num2"
+else
+	echo "Its A Tie"
+fi
